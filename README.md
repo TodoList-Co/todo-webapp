@@ -1,6 +1,6 @@
 # React + Vite
 
-API Guide: https://jsonplaceholder.typicode.com/guide/
+Objective: build out the frontend for TodoList-Co's latest application: a todo list app. You do not need to connect to a backend, the data can be mocked and does not need to persist. Feel free to use any dependencies you need, as long as you meet the requirements (listed below).
 
 ### Getting Started
 
@@ -11,7 +11,8 @@ API Guide: https://jsonplaceholder.typicode.com/guide/
 
 ### Required features
 
--   [ ] Display a list of tasks from the API
+-   [ ] Display a list of incomplete tasks on home page
+-   [ ] Display a list of complete tasks on /complete page
 -   [ ] Ability to add tasks
 -   [ ] Ability to delete tasks
--   [ ] Ability to mark tasks a complete/incomplete
+-   [ ] Ability to mark tasks as complete or incomplete
