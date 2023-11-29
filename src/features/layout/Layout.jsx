@@ -22,7 +22,7 @@ const Layout = () => {
 				})
 			);
 		} else {
-			alert("Unable to add task: task must be less than 200 characters.");
+			alert("Unable to add task: task must be less than 200 characters");
 		}
 	};
 
