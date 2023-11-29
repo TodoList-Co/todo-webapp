@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { StyledLayout } from "./Layout.styled";
 import SearchBar from "../searchBar/SearchBar";
-import { useDispatch } from "react-redux";
-import { addTask } from "../app/taskSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addTask, getTasks } from "../app/taskSlice";
 import uuid from "react-uuid";
 
 const Layout = () => {
 	const dispatch = useDispatch();
+	const tasks = useSelector(getTasks);
 	const [search, setSearch] = useState("");
 
 	const handleSubmit = () => {
@@ -21,14 +22,14 @@ const Layout = () => {
 				})
 			);
 		} else {
-			alert("Unable to add task: task must be less than 200 characters.");
+			alert("Unable to add task: task must be less than 200 characters");
 		}
 	};
 
 	return (
 		<StyledLayout>
 			<div className="row">
-				<h1>Hello, User!</h1>
+				<h1>{`Hello User, You Have ${tasks.length} Tasks!`}</h1>
 			</div>
 			<hr />
 			<SearchBar
